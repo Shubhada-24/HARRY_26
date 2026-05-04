@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#f2f2f2;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            height:100vh;
+        }
+
+        .box{
+
+            width:500px;
+
+            background:white;
+
+            padding:25px;
+
+            border-radius:10px;
+
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+        }
+
+        h2{
+            margin-bottom:20px;
+        }
+
+        .option{
+            display:block;
+
+            margin:12px 0;
+
+            font-size:18px;
+        }
+
+        button{
+
+            margin-top:20px;
+
+            width:100%;
+
+            padding:12px;
+
+            border:none;
+
+            background:blue;
+
+            color:white;
+
+            border-radius:8px;
+
+            cursor:pointer;
+        }
+
+        button:hover{
+            opacity:0.8;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="box">
+
+        <h2 id="question"></h2>
+
+        <div id="options"></div>
+
+        <button onclick="nextQuestion()">
+            Next
+        </button>
+
+    </div>
+
+
+
+<script>
+
+    let quiz = [
+
+        {
+            question:"HTML stands for?",
+            options:[
+                "Hyper Text Markup Language",
+                "High Text Machine Language",
+                "Home Tool Markup Language",
+                "None"
+            ],
+            answer:0
+        },
+
+        {
+            question:"CSS is used for?",
+            options:[
+                "Styling",
+                "Database",
+                "Logic",
+                "Networking"
+            ],
+            answer:0
+        },
+
+        {
+            question:"JavaScript is?",
+            options:[
+                "Programming Language",
+                "Database",
+                "OS",
+                "Browser"
+            ],
+            answer:0
+        },
+
+        {
+            question:"Which tag creates paragraph?",
+            options:[
+                "<p>",
+                "<h1>",
+                "<div>",
+                "<span>"
+            ],
+            answer:0
+        },
+
+        {
+            question:"Which property changes text color?",
+            options:[
+                "color",
+                "background",
+                "font",
+                "border"
+            ],
+            answer:0
+        }
+
+    ];
+
+
+    let index = 0;
+
+    let score = 0;
+
+
+    function loadQuestion(){
+
+        document.getElementById("question")
+        .innerText =
+        quiz[index].question;
+
+
+        let data = "";
+
+
+        for(let i=0; i<4; i++){
+
+            data +=
+
+            `
+            <label class="option">
+
+                <input
+                type="radio"
+                name="answer"
+                value="${i}">
+
+                ${quiz[index].options[i]}
+
+            </label>
+            `;
+
+        }
+
+
+        document.getElementById("options")
+        .innerHTML = data;
+
+    }
+
+
+
+    function nextQuestion(){
+
+        let selected =
+        document.querySelector(
+        'input[name="answer"]:checked'
+        );
+
+
+        if(selected){
+
+            if(
+
+                Number(selected.value)
+
+                ==
+
+                quiz[index].answer
+
+            ){
+
+                score++;
+
+            }
+
+        }
+
+
+
+        index++;
+
+
+
+        if(index < quiz.length){
+
+            loadQuestion();
+
+        }
+
+        else{
+
+            let message = "";
+
+
+            if(score >=4){
+
+                message =
+                "Excellent!";
+
+            }
+
+            else if(score >=2){
+
+                message =
+                "Good!";
+
+            }
+
+            else{
+
+                message =
+                "Keep Practicing!";
+            }
+
+
+
+            document.querySelector(".box")
+            .innerHTML =
+
+            `
+            <h2>
+
+            Quiz Finished
+
+            </h2>
+
+            <h3>
+
+            Score:
+
+            ${score}
+
+            / 5
+
+            </h3>
+
+            <br>
+
+            <h3>
+
+            ${message}
+
+            </h3>
+            `;
+
+        }
+
+    }
+
+
+
+    loadQuestion();
+
+</script>
+
+
+</body>
+</html>
