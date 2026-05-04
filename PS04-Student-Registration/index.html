@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f2f2f2;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            min-height:100vh;
+        }
+
+        .form-box{
+            width:500px;
+
+            background:white;
+
+            padding:25px;
+
+            border-radius:10px;
+
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        label{
+            display:block;
+            margin-top:12px;
+            margin-bottom:5px;
+            font-weight:bold;
+        }
+
+        input,
+        select{
+            width:100%;
+            padding:10px;
+
+            border:1px solid gray;
+
+            border-radius:5px;
+        }
+
+        input:focus,
+        select:focus{
+            outline:none;
+            border:2px solid blue;
+        }
+
+        .radio-group,
+        .checkbox-group{
+            margin-top:10px;
+        }
+
+        .radio-group label,
+        .checkbox-group label{
+            display:inline;
+            margin-right:15px;
+            font-weight:normal;
+        }
+
+        button{
+            width:100%;
+
+            margin-top:20px;
+
+            padding:12px;
+
+            border:none;
+
+            background:blue;
+
+            color:white;
+
+            font-size:16px;
+
+            border-radius:8px;
+
+            cursor:pointer;
+
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:scale(1.03);
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="form-box">
+
+        <h2>Student Registration</h2>
+
+
+        <form>
+
+
+            <label>Full Name</label>
+
+            <input
+                    type="text"
+                    required>
+
+
+            <label>Email</label>
+
+            <input
+                    type="email"
+                    required>
+
+
+            <label>Phone</label>
+
+            <input
+                    type="tel"
+                    pattern="[0-9]{10}"
+                    required>
+
+
+            <label>Date of Birth</label>
+
+            <input
+                    type="date"
+                    required>
+
+
+            <label>Course</label>
+
+            <select required>
+
+                <option value="">
+                    Select Course
+                </option>
+
+                <option>
+                    BCA
+                </option>
+
+                <option>
+                    BTech
+                </option>
+
+                <option>
+                    MCA
+                </option>
+
+            </select>
+
+
+            <label>Gender</label>
+
+            <div class="radio-group">
+
+                <input type="radio" name="gender">
+                <label>Male</label>
+
+
+                <input type="radio" name="gender">
+                <label>Female</label>
+
+
+                <input type="radio" name="gender">
+                <label>Other</label>
+
+            </div>
+
+
+            <label>Skills</label>
+
+            <div class="checkbox-group">
+
+                <input type="checkbox">
+                <label>HTML</label>
+
+
+                <input type="checkbox">
+                <label>CSS</label>
+
+
+                <input type="checkbox">
+                <label>JavaScript</label>
+
+
+                <input type="checkbox">
+                <label>React</label>
+
+            </div>
+
+
+            <button>
+                Submit
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+</body>
+</html>
