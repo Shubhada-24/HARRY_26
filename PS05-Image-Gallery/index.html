@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Image Gallery</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#f2f2f2;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .gallery{
+
+            display:grid;
+
+            grid-template-columns:
+            repeat(auto-fit,minmax(250px,1fr));
+
+            gap:20px;
+
+        }
+
+
+        .box{
+
+            position:relative;
+
+            overflow:hidden;
+
+            border-radius:10px;
+
+            cursor:pointer;
+
+        }
+
+
+        .box img{
+
+            width:100%;
+
+            display:block;
+
+            transition:0.5s;
+
+        }
+
+
+        .box::after{
+
+            content:"Beautiful Image";
+
+            position:absolute;
+
+            top:0;
+            left:0;
+
+            width:100%;
+            height:100%;
+
+            background:rgba(0,0,0,0.6);
+
+            color:white;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            opacity:0;
+
+            transition:0.5s;
+
+            font-size:20px;
+
+        }
+
+
+        .box:hover img{
+
+            transform:scale(1.1);
+
+        }
+
+
+        .box:hover::after{
+
+            opacity:1;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <h1>Image Gallery</h1>
+
+
+    <div class="gallery">
+
+
+        <div class="box">
+            <img src="https://picsum.photos/300?1">
+        </div>
+
+
+        <div class="box">
+            <img src="https://picsum.photos/300?2">
+        </div>
+
+
+        <div class="box">
+            <img src="https://picsum.photos/300?3">
+        </div>
+
+
+        <div class="box">
+            <img src="https://picsum.photos/300?4">
+        </div>
+
+
+        <div class="box">
+            <img src="https://picsum.photos/300?5">
+        </div>
+
+
+        <div class="box">
+            <img src="https://picsum.photos/300?6">
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
