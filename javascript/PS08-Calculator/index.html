@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:#f2f2f2;
+        }
+
+        .calculator{
+
+            width:320px;
+
+            background:white;
+
+            padding:20px;
+
+            border-radius:10px;
+
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+        }
+
+        input{
+
+            width:100%;
+
+            height:60px;
+
+            font-size:25px;
+
+            text-align:right;
+
+            padding:10px;
+
+            margin-bottom:15px;
+
+        }
+
+        .buttons{
+
+            display:grid;
+
+            grid-template-columns:
+            repeat(4,1fr);
+
+            gap:10px;
+
+        }
+
+        button{
+
+            padding:20px;
+
+            font-size:20px;
+
+            border:none;
+
+            background:#ddd;
+
+            border-radius:8px;
+
+            cursor:pointer;
+
+        }
+
+        button:hover{
+
+            background:#bbb;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="calculator">
+
+
+        <input
+               type="text"
+               id="screen"
+               readonly>
+
+
+
+        <div class="buttons">
+
+            <button onclick="clearScreen()">
+                C
+            </button>
+
+            <button onclick="add('/')">
+                /
+            </button>
+
+            <button onclick="add('*')">
+                *
+            </button>
+
+            <button onclick="add('-')">
+                -
+            </button>
+
+
+            <button onclick="add('7')">
+                7
+            </button>
+
+            <button onclick="add('8')">
+                8
+            </button>
+
+            <button onclick="add('9')">
+                9
+            </button>
+
+            <button onclick="add('+')">
+                +
+            </button>
+
+
+            <button onclick="add('4')">
+                4
+            </button>
+
+            <button onclick="add('5')">
+                5
+            </button>
+
+            <button onclick="add('6')">
+                6
+            </button>
+
+            <button onclick="add('.')">
+                .
+            </button>
+
+
+            <button onclick="add('1')">
+                1
+            </button>
+
+            <button onclick="add('2')">
+                2
+            </button>
+
+            <button onclick="add('3')">
+                3
+            </button>
+
+            <button onclick="calculate()">
+                =
+            </button>
+
+
+            <button onclick="add('0')">
+                0
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+
+<script>
+
+    let screen =
+    document.getElementById("screen");
+
+
+
+    function add(value){
+
+        screen.value =
+        screen.value + value;
+
+    }
+
+
+
+    function clearScreen(){
+
+        screen.value = "";
+
+    }
+
+
+
+    function calculate(){
+
+        try{
+
+            if(screen.value.includes("/0")){
+
+                screen.value =
+                "Cannot divide by zero";
+
+                return;
+
+            }
+
+
+            screen.value =
+            eval(screen.value);
+
+        }
+
+        catch{
+
+            screen.value =
+            "Error";
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>
