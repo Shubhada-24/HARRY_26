@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<Library
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="library.xsd">
+
+
+    <Book>
+
+        <BookID>1</BookID>
+
+        <Title>Java Basics</Title>
+
+        <Author>James</Author>
+
+        <Genre>Programming</Genre>
+
+        <PublishedYear>2020</PublishedYear>
+
+        <Price>500.50</Price>
+
+    </Book>
+
+
+
+    <Book>
+
+        <BookID>2</BookID>
+
+        <Title>Python Guide</Title>
+
+        <Author>Mike</Author>
+
+        <Genre>Programming</Genre>
+
+        <PublishedYear>2021</PublishedYear>
+
+        <Price>650.00</Price>
+
+    </Book>
+
+
+
+    <Book>
+
+        <BookID>3</BookID>
+
+        <Title>Web Design</Title>
+
+        <Author>John</Author>
+
+        <Genre>Technology</Genre>
+
+        <PublishedYear>2019</PublishedYear>
+
+        <Price>450.25</Price>
+
+    </Book>
+
+
+
+    <Book>
+
+        <BookID>4</BookID>
+
+        <Title>Database Systems</Title>
+
+        <Author>Smith</Author>
+
+        <Genre>Education</Genre>
+
+        <PublishedYear>2018</PublishedYear>
+
+        <Price>700.00</Price>
+
+    </Book>
+
+
+
+    <Book>
+
+        <BookID>5</BookID>
+
+        <Title>AI Basics</Title>
+
+        <Author>David</Author>
+
+        <Genre>Science</Genre>
+
+        <PublishedYear>2023</PublishedYear>
+
+        <Price>850.75</Price>
+
+    </Book>
+
+
+</Library>
