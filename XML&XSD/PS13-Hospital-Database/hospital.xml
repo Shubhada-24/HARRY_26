@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<Hospital
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="hospital.xsd">
+
+
+    <Patient>
+
+        <PatientID>1</PatientID>
+
+        <Name>Rahul</Name>
+
+        <Age>22</Age>
+
+        <BloodGroup>B+</BloodGroup>
+
+        <AdmissionDate>2026-05-01</AdmissionDate>
+
+        <DoctorAssigned>Dr Sharma</DoctorAssigned>
+
+    </Patient>
+
+
+
+    <Patient>
+
+        <PatientID>2</PatientID>
+
+        <Name>Priya</Name>
+
+        <Age>35</Age>
+
+        <BloodGroup>O-</BloodGroup>
+
+        <AdmissionDate>2026-05-02</AdmissionDate>
+
+        <DoctorAssigned>Dr Mehta</DoctorAssigned>
+
+    </Patient>
+
+
+
+    <Patient>
+
+        <PatientID>3</PatientID>
+
+        <Name>Amit</Name>
+
+        <Age>41</Age>
+
+        <BloodGroup>AB+</BloodGroup>
+
+        <AdmissionDate>2026-05-03</AdmissionDate>
+
+        <DoctorAssigned>Dr Patel</DoctorAssigned>
+
+    </Patient>
+
+
+
+    <Patient>
+
+        <PatientID>4</PatientID>
+
+        <Name>Neha</Name>
+
+        <Age>28</Age>
+
+        <BloodGroup>A-</BloodGroup>
+
+        <AdmissionDate>2026-05-04</AdmissionDate>
+
+        <DoctorAssigned>Dr Singh</DoctorAssigned>
+
+    </Patient>
+
+
+</Hospital>
