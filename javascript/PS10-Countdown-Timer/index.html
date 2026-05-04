@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#f2f2f2;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            height:100vh;
+        }
+
+        .box{
+
+            width:400px;
+
+            background:white;
+
+            padding:25px;
+
+            text-align:center;
+
+            border-radius:10px;
+
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+        }
+
+        input{
+
+            width:100%;
+
+            padding:10px;
+
+            margin:15px 0;
+
+            font-size:18px;
+
+        }
+
+        h1{
+
+            font-size:50px;
+
+            margin:20px 0;
+
+        }
+
+        button{
+
+            padding:10px 20px;
+
+            margin:5px;
+
+            cursor:pointer;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+
+<div class="box">
+
+    <h2>Countdown Timer</h2>
+
+
+    <input
+
+           type="number"
+
+           id="minutes"
+
+           placeholder="Enter minutes">
+
+
+
+    <h1 id="timer">
+
+        00:00
+
+    </h1>
+
+
+
+    <button onclick="startTimer()">
+
+        Start
+
+    </button>
+
+
+
+    <button onclick="pauseTimer()">
+
+        Pause
+
+    </button>
+
+
+
+    <button onclick="resetTimer()">
+
+        Reset
+
+    </button>
+
+
+</div>
+
+
+
+
+<script>
+
+
+    let totalSeconds = 0;
+
+    let interval;
+
+
+
+
+    function startTimer(){
+
+
+        if(totalSeconds == 0){
+
+            let mins =
+
+            document.getElementById("minutes").value;
+
+
+            totalSeconds = mins * 60;
+
+        }
+
+
+
+        interval =
+
+        setInterval(
+
+        updateTimer,
+
+        1000
+
+        );
+
+    }
+
+
+
+
+    function updateTimer(){
+
+
+        if(totalSeconds <= 0){
+
+            clearInterval(interval);
+
+            alert("Time Up!");
+
+            return;
+
+        }
+
+
+
+        totalSeconds--;
+
+
+
+        let mins =
+
+        Math.floor(
+
+        totalSeconds / 60
+
+        );
+
+
+
+        let secs =
+
+        totalSeconds % 60;
+
+
+
+        document.getElementById("timer")
+        .innerText =
+
+        String(mins)
+        .padStart(2,"0")
+
+        +
+
+        ":"
+
+        +
+
+        String(secs)
+        .padStart(2,"0");
+
+    }
+
+
+
+
+    function pauseTimer(){
+
+        clearInterval(interval);
+
+    }
+
+
+
+
+    function resetTimer(){
+
+        clearInterval(interval);
+
+        totalSeconds = 0;
+
+
+        document.getElementById("timer")
+        .innerText =
+
+        "00:00";
+
+
+        document.getElementById("minutes")
+        .value = "";
+
+    }
+
+
+</script>
+
+
+
+</body>
+</html>
