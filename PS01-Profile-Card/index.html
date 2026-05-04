@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Profile Card</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#f2f2f2;
+        }
+
+        .card{
+            width:350px;
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:15px;
+        }
+
+        .profile-img{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+        }
+
+        h2{
+            color:#333;
+        }
+
+        .bio{
+            text-align:center;
+            color:gray;
+            font-size:14px;
+        }
+
+        .skills{
+            width:100%;
+        }
+
+        .skills p{
+            margin-bottom:5px;
+            font-weight:bold;
+        }
+
+        .bar{
+            width:100%;
+            height:10px;
+            background:#ddd;
+            border-radius:10px;
+            margin-bottom:12px;
+            overflow:hidden;
+        }
+
+        .html{
+            width:90%;
+            height:100%;
+            background:orange;
+        }
+
+        .css{
+            width:80%;
+            height:100%;
+            background:blue;
+        }
+
+        .js{
+            width:70%;
+            height:100%;
+            background:green;
+        }
+
+        .buttons{
+            width:100%;
+            display:flex;
+            gap:10px;
+        }
+
+        button{
+            flex:1;
+            padding:12px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            color:white;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        .follow{
+            background:blue;
+        }
+
+        .message{
+            background:green;
+        }
+
+        button:hover{
+            transform:scale(1.05);
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="card">
+
+        <img src="https://via.placeholder.com/120"
+             class="profile-img">
+
+        <h2>John Doe</h2>
+
+        <p class="bio">
+            Web developer passionate about creating modern websites.
+        </p>
+
+
+        <div class="skills">
+
+            <p>HTML</p>
+            <div class="bar">
+                <div class="html"></div>
+            </div>
+
+
+            <p>CSS</p>
+            <div class="bar">
+                <div class="css"></div>
+            </div>
+
+
+            <p>JavaScript</p>
+            <div class="bar">
+                <div class="js"></div>
+            </div>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button class="follow">
+                Follow
+            </button>
+
+            <button class="message">
+                Message
+            </button>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
