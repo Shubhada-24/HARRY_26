@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two Column Blog</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f2f2f2;
+        }
+
+
+        header{
+            position:sticky;
+            top:0;
+
+            background:#222;
+            color:white;
+
+            padding:20px;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+        }
+
+        nav a:hover{
+            color:yellow;
+        }
+
+
+        .container{
+            display:flex;
+            gap:20px;
+
+            padding:20px;
+        }
+
+
+        .left{
+            width:70%;
+
+            background:white;
+
+            padding:20px;
+
+            border-radius:10px;
+
+            box-shadow:0 5px 10px rgba(0,0,0,0.2);
+        }
+
+        .left img{
+            width:100%;
+            border-radius:10px;
+            margin:15px 0;
+        }
+
+        .author{
+            color:gray;
+            margin-top:10px;
+        }
+
+
+        .right{
+            width:30%;
+
+            background:white;
+
+            padding:20px;
+
+            border-radius:10px;
+
+            box-shadow:0 5px 10px rgba(0,0,0,0.2);
+
+            height:fit-content;
+        }
+
+        .right h3{
+            margin-bottom:15px;
+        }
+
+        .right a{
+            display:block;
+
+            text-decoration:none;
+
+            color:blue;
+
+            margin-bottom:12px;
+        }
+
+        .right a:hover{
+            color:red;
+        }
+
+
+        @media(max-width:600px){
+
+            .container{
+                flex-direction:column;
+            }
+
+            .left,
+            .right{
+                width:100%;
+            }
+
+            header{
+                flex-direction:column;
+                gap:10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <header>
+
+        <h1>My Blog</h1>
+
+        <nav>
+
+            <a href="#">Home</a>
+
+            <a href="#">Posts</a>
+
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <div class="container">
+
+
+        <div class="left">
+
+            <h2>Learning Web Development</h2>
+
+            <p class="author">
+                By John Doe | May 2026
+            </p>
+
+
+            <img src="https://via.placeholder.com/700x300">
+
+
+            <p>
+
+                Web development is one of the most exciting skills
+                in today's tech world.
+
+                HTML builds structure.
+
+                CSS adds styling.
+
+                JavaScript adds interactivity.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="right">
+
+            <h3>Recent Posts</h3>
+
+            <a href="#">HTML Basics</a>
+
+            <a href="#">CSS Flexbox Guide</a>
+
+            <a href="#">JavaScript DOM</a>
+
+            <a href="#">Responsive Design</a>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
