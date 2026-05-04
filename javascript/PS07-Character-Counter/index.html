@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Counter</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#f2f2f2;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            width:500px;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        textarea{
+            width:100%;
+            height:120px;
+            padding:10px;
+            font-size:16px;
+            border-radius:5px;
+            border:1px solid gray;
+        }
+
+        .info{
+            margin-top:15px;
+            font-size:16px;
+        }
+
+        button{
+            margin-top:15px;
+            width:100%;
+            padding:10px;
+            background:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div class="box">
+
+    <h2>Character Counter</h2>
+
+    <textarea id="text" maxlength="200"></textarea>
+
+    <div class="info">
+        Characters: <span id="char">0</span><br>
+        Words: <span id="word">0</span><br>
+        Remaining: <span id="remain">200</span>
+    </div>
+
+    <button onclick="clearText()">Clear</button>
+
+</div>
+
+
+<script>
+
+let textarea = document.getElementById("text");
+
+textarea.addEventListener("input", function(){
+
+    let text = textarea.value;
+
+    let charCount = text.length;
+
+    let wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+
+    let remaining = 200 - charCount;
+
+    document.getElementById("char").innerText = charCount;
+    document.getElementById("word").innerText = wordCount;
+    document.getElementById("remain").innerText = remaining;
+
+    if(remaining <= 20){
+        document.getElementById("remain").style.color = "red";
+    }
+    else{
+        document.getElementById("remain").style.color = "black";
+    }
+
+});
+
+function clearText(){
+    textarea.value = "";
+    document.getElementById("char").innerText = 0;
+    document.getElementById("word").innerText = 0;
+    document.getElementById("remain").innerText = 200;
+}
+
+</script>
+
+
+</body>
+</html>
