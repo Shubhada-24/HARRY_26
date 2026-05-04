@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<Inventory
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="shop.xsd">
+
+
+    <Product>
+
+        <ProductID>1</ProductID>
+
+        <Name>Laptop</Name>
+
+        <Category>Electronics</Category>
+
+        <Stock>10</Stock>
+
+        <Price>65000.00</Price>
+
+    </Product>
+
+
+
+    <Product>
+
+        <ProductID>2</ProductID>
+
+        <Name>T-Shirt</Name>
+
+        <Category>Clothing</Category>
+
+        <Stock>25</Stock>
+
+        <Price>799.50</Price>
+
+    </Product>
+
+
+
+    <Product>
+
+        <ProductID>3</ProductID>
+
+        <Name>Chocolate</Name>
+
+        <Category>Food</Category>
+
+        <Stock>50</Stock>
+
+        <Price>120.00</Price>
+
+    </Product>
+
+
+
+    <Product>
+
+        <ProductID>4</ProductID>
+
+        <Name>Mobile</Name>
+
+        <Category>Electronics</Category>
+
+        <Stock>15</Stock>
+
+        <Price>30000.00</Price>
+
+    </Product>
+
+
+
+    <Product>
+
+        <ProductID>5</ProductID>
+
+        <Name>Jeans</Name>
+
+        <Category>Clothing</Category>
+
+        <Stock>12</Stock>
+
+        <Price>1500.00</Price>
+
+    </Product>
+
+
+</Inventory>
